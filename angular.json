@@ -13,7 +13,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "browser": "src/main.ts",
+            "outputPath": "dist/light-app",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],

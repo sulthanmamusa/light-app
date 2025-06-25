@@ -9,6 +9,12 @@ pipeline {
     CHROME_BIN = '/usr/bin/chromium-browser'
   }
 
+  stage('Clean') {
+    steps {
+      deleteDir() // Clean workspace before build
+    }
+  }
+
   stages {
     stage('Build') {
       steps {
