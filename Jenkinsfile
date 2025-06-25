@@ -9,13 +9,16 @@ pipeline {
     CHROME_BIN = '/usr/bin/chromium-browser'
   }
 
-  stage('Clean') {
-    steps {
-      deleteDir() // Clean workspace before build
-    }
-  }
+  
 
   stages {
+
+    stage('Clean') {
+      steps {
+        deleteDir() // Clean workspace before build
+      }
+    }
+    
     stage('Build') {
       steps {
         sh 'npx ng build --configuration production'
